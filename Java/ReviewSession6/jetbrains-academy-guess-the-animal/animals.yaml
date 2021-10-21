@@ -1,0 +1,10 @@
+---
+data: "it is a mammal"
+right:
+  data: "it can climb a tree"
+  right:
+    data: "a lynx"
+  left:
+    data: "a fox"
+left:
+  data: "a shark"

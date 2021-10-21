@@ -1,0 +1,15 @@
+{
+  "data" : "it is a mammal",
+  "right" : {
+    "data" : "it is living in the forest",
+    "right" : {
+      "data" : "a fox"
+    },
+    "left" : {
+      "data" : "a cat"
+    }
+  },
+  "left" : {
+    "data" : "a shark"
+  }
+}
