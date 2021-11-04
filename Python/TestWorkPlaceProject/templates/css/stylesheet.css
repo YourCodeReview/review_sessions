@@ -1,0 +1,185 @@
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+h1 {
+	margin: 1em 0 0.5em 0;
+	color: #000099;
+	font-weight: normal;
+	font-family: 'Arial', sans-serif;
+	font-size: 36px;
+	line-height: 42px;
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px #777;
+}
+
+h2 {
+	margin: 1em 0 0.5em 0;
+	color: #00001a;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 40px;
+	font-family: 'Arial', sans-serif;
+}
+
+h3 {
+	margin: 1em 0 0.5em 0;
+	color: #00001a;
+	font-size: 22px;
+	line-height: 40px;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Arial', sans-serif;
+	letter-spacing: 1px;
+	font-style: italic;
+}
+
+h4 {
+	margin: 0 0 0 0;
+	color: #00001a;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: normal;
+	font-family: 'Arial', sans-serif;
+}
+
+h5 {
+	margin: 0 0 0 0;
+	color: #00001a;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: bold;
+	font-family: 'Arial', sans-serif;
+	text-decoration: underline;
+}
+
+.rtable {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+
+  overflow-x: auto;
+
+  white-space: nowrap;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.rtable,
+.rtable--flip tbody {
+  // optional - enable iOS momentum scrolling
+  -webkit-overflow-scrolling: touch;
+
+  background: radial-gradient(left, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 0 center,
+              radial-gradient(right, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 100% center;
+  background-size: 10px 100%, 10px 100%;
+  background-attachment: scroll, scroll;
+  background-repeat: no-repeat;
+}
+
+.rtable td:first-child,
+.rtable--flip tbody tr:first-child {
+  background-image: linear-gradient(to right, rgba(180,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: 20px 100%;
+}
+
+.rtable td:last-child,
+.rtable--flip tbody tr:last-child {
+  background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 20px 100%;
+}
+
+.rtable th {
+  font-size: 11px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #f2f0e6;
+}
+
+.rtable th,
+.rtable td {
+  vertical-align: top;
+  padding: 6px 12px;
+  border: 1px solid #d9d7ce;
+}
+
+.rtable--flip {
+  display: flex;
+  overflow: hidden;
+  background: none;
+}
+
+.rtable--flip thead {
+  display: flex;
+  flex-shrink: 0;
+  min-width: min-content;
+}
+
+.rtable--flip tbody {
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.rtable--flip tr {
+  display: flex;
+  flex-direction: column;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+
+.rtable--flip td,
+.rtable--flip th {
+  display: block;
+}
+
+.rtable--flip td {
+  background-image: none !important;
+  border-left: 0;
+}
+
+.rtable--flip th:not(:last-child),
+.rtable--flip td:not(:last-child) {
+  border-bottom: 0;
+}
+ol {
+	list-style-type: none;
+	counter-reset: li;
+	padding-inline-start: 5px;
+}
+li {
+	font-size: 0.8rem;
+}
+
+li:before {
+  counter-increment: li;
+  content: counter(li, decimal-leading-zero);
+	color: green;
+	margin-right: 0.1em;
+}
+a:link, a:visited {
+    background-color: #144336;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.2em 0 0.2em 0;
+    width:260px; /* or whatever width you want. */
+    max-width:260px; /* or whatever width you want. */
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: black;
+}
