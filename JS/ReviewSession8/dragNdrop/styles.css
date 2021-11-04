@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #e5e5e5;
+  display: flex;
+  padding-top: 5rem;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.row {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.col-header {
+  display: flex;
+  width: calc(33.333% - 10px);
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  color: #fff;
+}
+
+.item {
+  width: 100%;
+  min-height: 66px;
+  border: 1px solid #eee;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  background: #f7f6f7;
+  padding: 15px;
+  text-align: center;
+  cursor: grab;
+  margin-bottom: 15px;
+   color: #181717;
+   position: relative;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+  width: calc(33.333% - 10px);
+  height: 100vh;
+}
+
+.start {
+  background: linear-gradient(90deg, #ff85e4 0%, #229efd 179.25%);
+}
+
+.progress {
+  background: linear-gradient(90deg, #209cff 0%, #68e0cf 100%);
+}
+
+.done {
+  background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.hold {
+  border: 2px solid rgb(113, 113, 247);
+}
+
+.hide {
+  display: none;
+}
+
+.hovered {
+  border-top: 2px solid rgb(124, 77, 253);
+  border-radius: 3px 3px 0 0;
+}
+.item .item__tarea {
+ visibility: hidden;
+ opacity: 0;
+ user-select: none;
+ pointer-events: none;
+}
+.item.editable .item__tarea {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  user-select: auto;
+  pointer-events: auto;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  resize: none;
+  outline-color: rgb(43, 43, 251);
+  border:1px solid rgb(113, 113, 247);
+  border-radius: 20px;
+  font-size: 16px;  
+  color: #181717;
+  font-family: 'Noto Sans', serif;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+.removeCard,
+.addCard {
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+    text-decoration: none;
+  display: inline-block;
+  color: white;
+  border-radius: 10px;
+  padding: 0 8px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+.removeCard:hover,
+.addCard:hover {
+  background-position: right center;
+}
+
+.removeCard {
+  position: absolute;
+  right: 5px;
+  top: 5px; 
+}
