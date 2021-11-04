@@ -1,0 +1,10 @@
+beautifulsoup4==4.9.3
+bs4==0.0.1
+lxml==4.6.3
+peewee==3.14.4
+prettytable==2.1.0
+progress==1.5
+selenium==3.141.0
+soupsieve==2.2.1
+urllib3==1.26.5
+XlsxWriter==1.4.3
