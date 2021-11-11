@@ -1,0 +1,42 @@
+{% extends "base_template.html" %}
+{% block content %}
+<h4>Список офисов и их посетителей</h4>
+    <table class="rtable">
+      {% for office in offices %}
+      <td>
+        <h5> Офис номер {{office}}
+        </h5>
+        <ol>
+          {% if not office is none %}
+          {% for visitor in offices[office] %}
+            <li>
+              {{' - ' + visitor}}
+            </li>
+          {% endfor %}
+          {% endif %}
+        </ol>
+      </td>
+      {% endfor %}
+    </table>
+  <br><br>
+  <h4>Очередь ожидающих входа в офис</h4>
+<br>
+  <ol>
+    {% for user in waiting %}
+      <li>
+        {{' - ' + user['First_name'] + ' ' + user['Last_name']}}
+      </li>
+    {% endfor %}
+  </ol>
+  <h4>Выберите действие:</h4>
+<br>
+  <a href="/add_user">Добавить пользователя в офис.</a><br>
+  <a href="/user_info">Вывести информацию о пользователе</a><br><br>
+  <h4>Переход к более позднему времени</h4>
+  <form action = "skip_time" method = "post">
+    <p><input type="number" name="add_hours" value="1" min="1" max="10">
+      Укажите количество часов на которое переместиться вперед (не более 10)</p>
+    <input type="submit" name="actions" value="Выполнить">
+  </form>
+
+{% endblock %}
