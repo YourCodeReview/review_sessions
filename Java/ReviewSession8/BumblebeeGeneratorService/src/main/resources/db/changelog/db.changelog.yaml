@@ -1,0 +1,79 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: Baldin T.V
+      changes:
+        - sql:
+            sql: create schema if not exists repository
+
+        - createTable:
+            schemaName: repository
+            tableName: containers
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: text
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: creation_date
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: update_date
+                  type: timestamp
+              - column:
+                  name: status
+                  type: varchar(50)
+              - column:
+                  name: history_on
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: type
+                  type: text
+                  constraints:
+                    nullable: false
+              - column:
+                  name: cuid
+                  type: uuid
+                  constraints:
+                    nullable: false
+
+        - createTable:
+            schemaName: repository
+            tableName: test_data
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: generator_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: container_ref
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: value
+                  type: jsonb
+
+        - sql:
+            sql: alter table repository.test_data add constraint test_data_containers_id_fk foreign key (container_ref) references repository.containers;

@@ -1,0 +1,38 @@
+version: '3.8'
+
+networks:
+  dev:
+    name: dev
+services:
+  app:
+    container_name: dg-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+      - 8090:8090
+    networks:
+      - dev
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:12-alpine
+    restart: always
+    container_name: dg-database
+    ports:
+      - 5432:5432
+    networks:
+      - dev
+    environment:
+      POSTGRES_PASSWORD: 1
+      POSTGRES_DB: data_generator
+
+
+
+
+
+
+
+
