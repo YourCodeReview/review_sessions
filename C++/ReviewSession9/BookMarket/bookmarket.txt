@@ -1,0 +1,131 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	int price=8;
+	string q = "Harry Potter";
+	string w = "White Fang";
+	string e = "Call of the wild";
+	string r = "Cinderella";
+	string t = "Sea Wolf";
+	double Packprice[5] = {8, 15.2, 21.6, 25.6, 30};
+	cout << "Enter ammount of each book\n";
+	int bookammount[5];
+	cout << q << " - ";
+	cin >> bookammount[0];
+	cout << w << " - ";
+	cin >> bookammount[1];
+	cout << e << " - ";
+	cin >> bookammount[2];
+	cout << r << " - ";
+	cin >> bookammount[3];
+	cout << t << " - ";
+	cin >> bookammount[4];
+	int PriceWithoutDicount;
+	PriceWithoutDicount = (bookammount[0] + bookammount[1] + bookammount[2] + bookammount[3] + bookammount[4])*price;
+	cout << "price without disc = " << PriceWithoutDicount;
+	int Totalammountofbooks;
+	double Totalprice1, Totalprice2, Totalprice; // Price with disc
+	int Pacs[5] = {0,0,0,0,0};
+	for (int i = 0; i < 5; i++) { //sort
+		for (int j = 0; j < 4; j++) {
+			if (bookammount[j] < bookammount[j + 1]){
+				int b = bookammount[j];
+				bookammount[j] = bookammount[j + 1];
+				bookammount[j + 1] = b;
+				}
+		}
+	}
+	int truebookammount[5] = { bookammount[0] , bookammount[1] , bookammount[2] , bookammount[3] , bookammount[4] };
+	Totalammountofbooks = bookammount[0] + bookammount[1] + bookammount[2] + bookammount[3] + bookammount[4];
+	while (Totalammountofbooks > 0) {
+		if (bookammount[0] > 0 && bookammount[1] > 0 && bookammount[2] > 0 && bookammount[3] > 0 && bookammount[4] > 0) {
+			Pacs[4] ++;
+			for (int i = 0; i < 5; i++) {
+				bookammount[i]--;
+			}
+		}
+		else if (bookammount[0] > 0 && bookammount[1] > 0 && bookammount[2] > 0 && bookammount[3] > 0) {
+			Pacs[3]++;
+			for (int i = 0; i < 4; i++) {
+				bookammount[i]--;
+			}
+		}
+		else if (bookammount[0] > 0 && bookammount[1] > 0 && bookammount[2] > 0) {
+			Pacs[2]++;
+			for (int i = 0; i < 3; i++) {
+				bookammount[i]--;
+			}
+		}
+		else if (bookammount[0] > 0 && bookammount[1] > 0) {
+			Pacs[1]++;
+			for (int i = 0; i < 2; i++) {
+				bookammount[i]--;
+			}
+		}
+		else {
+			Pacs[0]++;
+			bookammount[0]--;
+		}
+		Totalammountofbooks = bookammount[0] + bookammount[1] + bookammount[2] + bookammount[3] + bookammount[4];
+	}
+	Totalprice1 = (Packprice[0] * Pacs[0] + Packprice[1] * Pacs[1] + Packprice[2] * Pacs[2] + Packprice[3] * Pacs[3] + Packprice[4] * Pacs[4]);
+	for (int i = 0; i < 5; i++) { //clearing var.
+		bookammount[i] = truebookammount[i];
+		Pacs[i] = 0;
+	}
+	Totalammountofbooks = bookammount[0] + bookammount[1] + bookammount[2] + bookammount[3] + bookammount[4];
+	while (Totalammountofbooks > 0) {
+		if (bookammount[0] > 1 && bookammount[1] > 1 && bookammount[2] > 1 && bookammount[3] > 1 && bookammount[4] > 1) {
+			Pacs[4] ++;
+			for (int i = 0; i < 5; i++) {
+				bookammount[i]--;
+			}
+		}
+		else if (bookammount[0] > 0 && bookammount[1] > 0 && bookammount[2] > 0 && bookammount[3] > 0) {
+			Pacs[3]++;
+			for (int i = 0; i < 4; i++) {
+				bookammount[i]--;
+			}
+		}
+		else if (bookammount[0] > 0 && bookammount[1] > 0 && bookammount[2] > 0) {
+			Pacs[2]++;
+			for (int i = 0; i < 3; i++) {
+				bookammount[i]--;
+			}
+		}
+		else if (bookammount[0] > 0 && bookammount[1] > 0) {
+			Pacs[1]++;
+			for (int i = 0; i < 2; i++) {
+				bookammount[i]--;
+			}
+		}
+		else {
+			Pacs[0]++;
+			bookammount[0]--;
+		}
+		Totalammountofbooks = bookammount[0] + bookammount[1] + bookammount[2] + bookammount[3] + bookammount[4];
+		for (int i = 0; i < 5; i++) { //sort
+			for (int j = 0; j < 4; j++) {
+				if (bookammount[j] < bookammount[j + 1]) {
+					int b = bookammount[j];
+					bookammount[j] = bookammount[j + 1];
+					bookammount[j + 1] = b;
+				}
+			}
+		}
+	}
+	Totalprice2 = (Packprice[0] * Pacs[0] + Packprice[1] * Pacs[1] + Packprice[2] * Pacs[2] + Packprice[3] * Pacs[3] + Packprice[4] * Pacs[4]);
+	if (Totalprice1 > Totalprice2) {
+		Totalprice = Totalprice2;
+	}
+	else {
+		Totalprice = Totalprice1;
+	}
+	cout << "\n Price with disc = " << Totalprice;
+	cout << "\n TP1 (5 pacs )= " << Totalprice1;
+	cout << "\n TP2 (4 pacs )= " << Totalprice2;
+
+	return 0;
+}
