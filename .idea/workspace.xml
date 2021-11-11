@@ -16,7 +16,6 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,10 +33,6 @@
       <recent name="$PROJECT_DIR$/Python/ReviewSession8/TestWorkPlaceProject" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Python/ReviewSession8" />
-      <recent name="$PROJECT_DIR$/Python/ReviewSession8/EisAutoAcceptance" />
-      <recent name="$PROJECT_DIR$/Python/ReviewSession8/EisAutoAcceptance/src" />
     </key>
   </component>
   <component name="TaskManager">
@@ -55,7 +50,6 @@
       <option name="project" value="LOCAL" />
       <updated>1636014391492</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
