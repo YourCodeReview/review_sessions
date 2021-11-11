@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ru.tinkoff.tinkoff6hw.dao.StudentRepository">
+
+    <resultMap id="StudentMap" type="ru.tinkoff.tinkoff6hw.model.Student">
+        <result property="id" column="id" typeHandler="ru.tinkoff.tinkoff6hw.handler.UuidTypeHandler"/>
+        <result property="name" column="name"/>
+        <result property="age" column="age"/>
+        <result property="grade" column="grade"/>
+    </resultMap>
+
+    <insert id="save" parameterType="ru.tinkoff.tinkoff6hw.model.Student">
+        INSERT INTO students (id, name, age, grade)
+        VALUES (#{id}, #{name}, #{age}, #{grade})
+    </insert>
+
+    <insert id="saveStudentsCourse">
+        INSERT INTO student_course (studentId, courseId)
+        VALUES (#{studentId}, #{courseId})
+    </insert>
+
+    <update id="update" parameterType="ru.tinkoff.tinkoff6hw.model.Student">
+        UPDATE students
+        SET name=#{student.name},
+            age=#{student.age},
+            grade=#{student.grade}
+        WHERE id=#{id};
+    </update>
+
+    <delete id="delete">
+        DELETE FROM student_course WHERE studentId=#{id};
+        DELETE FROM students WHERE id=#{id}
+    </delete>
+
+    <select id="findById" resultMap="StudentMap">
+        SELECT * FROM students WHERE id=#{id}
+    </select>
+
+    <select id="findAll" resultMap="StudentMap">
+        SELECT * FROM students
+    </select>
+</mapper>

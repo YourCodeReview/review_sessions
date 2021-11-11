@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ru.tinkoff.tinkoff6hw.dao.CourseRepository">
+
+    <resultMap id="CourseMap" type="ru.tinkoff.tinkoff6hw.model.Course">
+        <result property="id" column="id" typeHandler="ru.tinkoff.tinkoff6hw.handler.UuidTypeHandler"/>
+        <result property="name" column="name"/>
+        <result property="description" column="description"/>
+        <result property="requiredGrade" column="requiredGrade"/>
+    </resultMap>
+
+    <insert id="save" parameterType="ru.tinkoff.tinkoff6hw.model.Course">
+        INSERT INTO courses (id, name, description, requiredGrade)
+        VALUES (#{id}, #{name}, #{description}, #{requiredGrade});
+    </insert>
+
+    <update id="update" parameterType="ru.tinkoff.tinkoff6hw.model.Course">
+        UPDATE courses
+        SET name=#{course.name},
+            description=#{course.description},
+            requiredGrade=#{requiredGrade}
+        WHERE id=#{id};
+    </update>
+
+    <delete id="delete">
+        DELETE FROM student_course WHERE courseId=#{id};
+        DELETE FROM courses WHERE id=#{id};
+    </delete>
+
+    <select id="findWithMaxAvgStudAge" resultType="ru.tinkoff.tinkoff6hw.model.Course">
+        SELECT id, name, description
+        FROM courses
+        WHERE id=(
+            SELECT TOP 1 courseId
+            FROM student_course
+                     INNER JOIN students
+                                ON student_course.studentId=students.id
+            GROUP BY courseId
+            ORDER BY AVG(age) DESC
+        );
+    </select>
+
+    <select id="findById" resultMap="CourseMap">
+        SELECT * FROM courses WHERE id=#{id};
+    </select>
+
+    <select id="findAll" resultMap="CourseMap">
+        SELECT * FROM courses;
+    </select>
+</mapper>

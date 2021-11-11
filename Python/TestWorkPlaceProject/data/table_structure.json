@@ -1,0 +1,20 @@
+{
+  "Users": {
+    "ID": "INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT",
+    "First_name": "TEXT NOT NULL",
+    "Last_name": "TEXT NOT NULL",
+    "Start_work_time": "INTEGER NOT NULL",
+    "End_work_time": "INTEGER NOT NULL",
+    "Remaining_work_time": "INTEGER NOT NULL",
+    "Work_hours_total": "INTEGER NOT NULL",
+    "office_id": "INTEGER"
+  },
+  "Offices": {
+    "ID": "INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT",
+    "Number": "TEXT NOT NULL"
+  },
+  "Queue": {
+    "ID": "INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT",
+    "User_ID": "TEXT NOT NULL"
+  }
+}
