@@ -1,0 +1,98 @@
+.products-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.products-container > *:not(:first-child) {
+  margin: 0 0 0 20px;
+}
+.products-element {
+  max-width: 300px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.856);
+  border-radius: 20px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.products-element::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -50%;
+  background: #26b939dc;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+.products-element::after {
+  content: "Nike";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 8rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.products-element:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+.products-element__img {
+  width: 75%;
+  object-fit: contain;
+  z-index: 1;
+  transition: 0.5s;
+  margin: auto;
+}
+.products-element:hover .products-element__img {
+    width: 60%;
+  }
+.products-element__text-information {
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+}
+.products-element__name {
+  font-size: 24px;
+  color: #fff;
+}
+.products-element__price {
+  font-size: 18px;
+  color: #fff;
+}
+.products-element__btn {
+  width: 50%;
+  height: 40px;
+  font-size: 18px;
+  color: #fff;
+  z-index: 1;
+  background: #59bd53;
+  border-radius: 20px;
+  border: none;
+  text-transform: uppercase;
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.products-element__btn__active {
+    background: rgba(160, 27, 27, 0.76);
+}
+.products-element:hover .products-element__btn {
+  top: 0;
+  opacity: 1;
+}

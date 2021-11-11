@@ -1,0 +1,24 @@
+.header-container {
+    width: 100%;
+    max-width: 1270px;
+    min-height: 60px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.header-container__counter {
+    width: 100%;
+    max-width: 10%;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+.header-container__image {
+    width: 100%;
+    max-width: 50px;
+    display: block;
+}
