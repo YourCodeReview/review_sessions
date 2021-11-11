@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Rules;
+
+use Illuminate\Contracts\Validation\Rule;
+
+class FurtherToday implements Rule
+{
+    /**
+     * Determine if the validation rule passes.
+     *
+     * @param string $attribute
+     * @param mixed $value
+     * @return bool
+     */
+    public function passes($attribute, $value): bool
+    {
+        return $value >= now()->format('Y-m-d');
+    }
+
+    /**
+     * Get the validation error message.
+     *
+     * @return string
+     */
+    public function message(): string
+    {
+        return 'Please enter a date older than today.';
+    }
+}
