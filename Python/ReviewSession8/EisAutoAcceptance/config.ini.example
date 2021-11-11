@@ -1,0 +1,49 @@
+[user]
+name = username
+
+[dir]
+year = C:\Data\2021
+day = 01.01.2021
+
+[url]
+login = https://some-system.com/login/
+matching = https://some-system.com/matching/
+
+[cookie]
+domain = some-system.com
+httponly = True
+name = MANE
+path = /
+secure = True
+value = xxxxx
+
+[code]
+fine = 00000000000000000140;00000000000000000140
+duty = 00000000000000000110
+spec = 00000000000000000140;00000000000000000140
+
+[code_title]
+fine = fine
+duty = duty
+spec = spec-fine
+
+[pattern]
+fine = \d{1}[-]\d{1}
+uin = [0][3][5][5]\d{21}
+
+[title]
+choosing = Choosing
+type = Type
+single = Single
+register = Register
+special payers = Payer1;Payer2
+bank day = number;purpose;decision
+payment = number;debtor;debtor_code
+table = number;amount;decision;payer;debtor
+report = Reports
+list = doing list
+days list = day list
+day choosing = Choosing
+log in = System registration
+make report = Save report
+exit = Quit
