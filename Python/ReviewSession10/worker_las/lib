@@ -1,0 +1,55 @@
+class lito_model():
+
+    def __init__(self, NGK, GK, PS):
+        super().__init__()
+        self.NGK = NGK
+        self.GK = GK
+        self.PS = PS
+
+    def min_max_NGK(self, i):
+        m1 = abs(self.NGK[i]- min(self.NGK))
+        m2 = abs(self.NGK[i] - max(self.NGK))
+        if m1 > m2:
+            return 1
+        else:
+            return 0
+
+    def min_max_GK(self, i):
+        m1 = abs(self.GK[i]- min(self.GK))
+        m2 = abs(self.GK[i] - max(self.GK))
+        if m1 > m2:
+            return 1
+        else:
+            return 0
+
+    def min_max_PS(self, i):
+        m1 = abs(self.PS[i]- min(self.PS))
+        m2 = abs(self.PS[i] - max(self.PS))
+        if m1 > m2:
+            return 1
+        else:
+            return 0
+
+    def litoform(self):
+        l = min(len(self.NGK), len(self.GK), len(self.PS))
+        itog_scan = []
+        for i in range(l):
+            p1 = str(self.min_max_NGK(i))
+            p2 = str(self.min_max_PS(i))
+            p3 = str(self.min_max_GK(i))
+            itog_scan.append(p1+p2+p3)
+        return itog_scan
+
+    def lito_write(self):
+        x = self.litoform()
+        lit = []
+        for i in x:
+            if i == '011':
+                lit.append(0)
+            elif i == '000':
+                lit.append(1)
+            elif i == '100':
+                lit.append(2)
+            elif i == '110':
+                lit.append(3)
+        return lit
