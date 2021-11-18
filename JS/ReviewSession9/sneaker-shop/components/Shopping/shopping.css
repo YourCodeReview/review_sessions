@@ -1,0 +1,38 @@
+.shoppingPage-container {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 15px;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+    transition: 0.3s;
+}
+.shoppingPage__table {
+
+}
+.shoppingPage__sum {
+    font-size: 24px;
+    color: aqua;
+
+}
+.shoppingPage__name {
+    font-size: 24px;
+    color: #fff;
+
+}
+.shoppingPage__price {
+    font-size: 18px;
+    color: #fff;
+
+}
+.shopping-close {
+    text-align: end;
+    color: #fff;
+
+}
+.shopping-close__img {
+    width: 100%;
+    max-width: 30px;
+}

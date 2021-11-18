@@ -1,0 +1,23 @@
+.error-container {
+    width: 100%;
+    min-height: 200px;
+    background: var(--error-backgroud);
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.error-container > * :not(:last-child) {
+    margin-bottom: 20px;
+}
+.error-title {
+    font-size: var(--error-font-title);
+    color: var(--error-text-color);
+
+}
+.error-description {
+    font-size: 16px;
+    color: var(--error-text-color);
+
+}
