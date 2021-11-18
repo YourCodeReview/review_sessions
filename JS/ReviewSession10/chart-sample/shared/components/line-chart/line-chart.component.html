@@ -1,0 +1,114 @@
+<ng-container *ngIf="!optionLoader;else pageLoader">
+
+  <form [formGroup]="filterForm">
+
+    <div class="radio-group series p-grid">
+      <label>{{'time_series'|translate}}:</label>
+      <p-radioButton
+        name="group2"
+        value="Monthly"
+        label="{{'month'|translate}}"
+        formControlName="reportCriteria">
+      </p-radioButton>
+      <p-radioButton
+        name="group2"
+        value="Quarterly"
+        label="{{'quarter'|translate}}"
+        formControlName="reportCriteria">
+      </p-radioButton>
+    </div>
+
+    <div class="filter-trend-wrapper p-grid">
+
+      <div class="filter-group">
+        <label>{{'year'|translate}}</label>
+        <p-multiSelect
+          [options]="years"
+          formControlName="years"
+          defaultLabel="{{'select'|translate}}"
+          maxSelectedLabels="100">
+        </p-multiSelect>
+      </div>
+
+      <div class="filter-group" *ngIf="filterForm.controls.reportCriteria.value==='Monthly'">
+        <label>{{'start_month'|translate}}</label>
+        <p-dropdown
+          placeholder="{{'select'|translate}}"
+          optionLabel="name"
+          [options]="months"
+          formControlName="startMonth"
+          filter="true">
+        </p-dropdown>
+      </div>
+
+      <div class="filter-group" *ngIf="filterForm.controls.reportCriteria.value==='Monthly'">
+        <label>{{'end_month'|translate}}</label>
+        <p-dropdown
+          placeholder="{{'select'|translate}}"
+          optionLabel="name"
+          [options]="months"
+          formControlName="endMonth"
+          filter="true">
+        </p-dropdown>
+      </div>
+
+      <div class="filter-group" *ngIf="filterOptions.includes('locations')">
+        <label>{{'locations'|translate}}</label>
+        <p-multiSelect
+          [options]="locations"
+          formControlName="locations"
+          optionLabel="name"
+          defaultLabel="{{'select'|translate}}"
+          maxSelectedLabels="5"></p-multiSelect>
+      </div>
+
+      <div class="filter-group" *ngIf="filterOptions.includes('locationGroups')">
+        <label>{{'location_groups'|translate}}</label>
+        <p-multiSelect
+          [options]="locationGroups"
+          formControlName="locationGroups"
+          optionLabel="name"
+          defaultLabel="{{'select'|translate}}"
+          maxSelectedLabels="5"></p-multiSelect>
+      </div>
+
+      <div class="filter-group" *ngIf="filterOptions.includes('professions')">
+        <label>{{'professions'|translate}}</label>
+        <p-multiSelect
+          [options]="professions"
+          formControlName="professions"
+          optionLabel="name"
+          defaultLabel="{{'select'|translate}}"
+          maxSelectedLabels="5">
+        </p-multiSelect>
+      </div>
+
+      <div class="filter-group" *ngIf="filterOptions.includes('professionGroups')">
+        <label>{{'profession_groups'|translate}}</label>
+        <p-multiSelect
+          [options]="professionGroups"
+          formControlName="professionGroups"
+          optionLabel="name"
+          defaultLabel="{{'select'|translate}}"
+          maxSelectedLabels="5"></p-multiSelect>
+      </div>
+
+    </div>
+
+  </form>
+
+  <div class="chart-wrapper">
+    <div [chart]="trendChart" class="chart-height-container"></div>
+    <app-chart-loader *ngIf='chartLoader'></app-chart-loader>
+  </div>
+
+</ng-container>
+
+<ng-template #pageLoader>
+  <div class="loader-wrapper">
+    <p-progressSpinner strokeWidth="3"></p-progressSpinner>
+  </div>
+</ng-template>
+
+
+
