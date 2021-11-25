@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Конвертор валют</string>
+    <string name="toolbar_select_fragment">Валюта не выбрана</string>
+    <string name="button_text">Изменить\nвалюту</string>
+    <string name="default_value_edit_number">0.0</string>
+    <string name="input_number_hint">Значение</string>
+    <string name="label_convert_fragment">Конвертор валют</string>
+    <string name="label_currency_list_fragment">Выбор валюты</string>
+    <string name="hint_search_view">Поиск</string>
+    <string name="search">Search</string>
+    <string name="enabled_toast_message">Сначала выбирите конвертируемые валюты</string>
+    <string name="preference_file_key">com.pet.moneyconvertor.ADD_RUBLE</string>
+    <string name="add_ruble_key">addedRuble</string>
+    <string name="left_button_navigation_key">Left</string>
+    <string name="right_button_navigation_key">Right</string>
+    <string name="exception_message_view_model_factory">Unknown ViewModel class</string>
+
+
+</resources>
