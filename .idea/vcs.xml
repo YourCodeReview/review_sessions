@@ -2,6 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Kotlin/ReviewSession11/MoneyConvertor" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JS/test1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Java/Encryption-Decryption_JetBrainsAcademy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Java/ReviewSession12/Encryption-Decryption_JetBrainsAcademy" vcs="Git" />
   </component>
 </project>
