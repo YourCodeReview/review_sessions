@@ -1,0 +1,88 @@
+{
+  "characters": "символов",
+
+  "placeholder": "Введите {label}",
+  "@placeholder": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+
+  "size": "{condition, select, less{меньше} more{больше}}",
+  "@size": {
+    "placeholders": {
+      "condition": {}
+    }
+  },
+
+  "validation_size": "{label} должен быть {condition} {count} {type}",
+  "@validation_size": {
+    "description": "Сообщения для валидирования значения по размеру",
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "condition": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      },
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "validation_equals": "{label_one} не совпадает с {label_second}",
+  "@validation_equals": {
+    "description": "Сообщение валидирования для совпадения значений",
+    "placeholders": {
+      "label_one": {
+        "type": "String"
+      },
+      "label_second": {
+        "type": "String"
+      }
+    }
+  },
+
+  "logo_first_word": "Role",
+  "logo_second_word": "Heroes",
+
+  "log_in": "Войти",
+  "log_in_success": "Вы успешно вошли",
+  "log_in_fail": "Не удалось войти",
+
+  "register": "Регистрация",
+  "register_form": "Форма регистрации",
+  "to_register": "Зарегестрировать",
+  "register_success": "Регистрация прошла успешно",
+  "register_fail": "Не удалось зарегестрироваться",
+
+  "login": "Логин",
+
+  "password": "Пароль",
+  "password_confirmation": "Подтверждение пароля",
+
+  "heroes": "Персонажи",
+  "hero": "Персонаж",
+  "hero_create": "Создать персонажа",
+  "hero_create_choose_game": "Выберите игровую систему",
+  "hero_delete": "Персонаж удален",
+  "hero_create_success": "Персонаж успешно создан",
+
+  "empty_list": "Список пуст",
+
+  "hero_detail_main_fields": "Основыные поля",
+  "hero_detail_main_fields_name": "Имя",
+  "hero_detail_main_fields_note": "Заметки",
+  "hero_detail_characteristics": "Характеристики",
+
+  "service_error": "Ошибка сервиса",
+
+  "search": "Посик",
+  "name": "Название",
+  "choose_values": "Выберите значения"
+}
