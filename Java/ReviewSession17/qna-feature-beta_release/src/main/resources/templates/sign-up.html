@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      layout:decorate="~{layout-template}">
+<head>
+    <!--/*-->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"/>
+    <!--*/-->
+    <title>Регистрация нового пользователя</title>
+</head>
+
+<body>
+<main class="container">
+    <div class="mb-5 visually-hidden" layout:fragment="content-title">
+    </div>
+    <div class="row">
+        <div class="col-lg-8 mb-4" layout:fragment="content">
+            <h3>Регистрация нового пользователя</h3>
+            <p class="text-muted">Все поля обязательны для заполнения.</p>
+            <form action="#" th:action="@{/registration}" th:object="${userCreateDto}" method="post">
+                <div class="mb-3 row">
+                    <label for="name" class="col-sm-2 col-form-label">Имя</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" th:field="*{name}"/>
+                        <p class="small mb-0">будет отображаться под вашими ответами и комментариями</p>
+<!--                        TODO оформление ошибок заполнения -->
+                        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" th:field="*{email}"/>
+                        <p class="small mb-0">используется как логин для входа и не виден другим пользователям</p>
+                        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="password" class="col-sm-2 col-form-label"
+                    >Пароль</label
+                    >
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="password" th:field="*{password}"/>
+                        <p class="small mb-0">минимум 6 символов</p>
+                        <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">
+                    <i class="bi-person-plus-fill"></i> Зарегистрировать
+                </button>
+            </form>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+        </div>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>
