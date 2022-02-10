@@ -1,0 +1,13 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+#root {
+  display: flex;
+  flex-wrap: wrap;
+}
