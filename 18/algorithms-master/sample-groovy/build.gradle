@@ -1,0 +1,17 @@
+plugins {
+    id 'groovy'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.8'
+    implementation project(':algorithm')
+}
+

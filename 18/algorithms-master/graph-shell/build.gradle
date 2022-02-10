@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.6.3'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':algorithm')
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.1'
+    implementation 'org.springframework.shell:spring-shell-starter:2.0.1.RELEASE'
+}
+
+bootJar {
+    launchScript()
+}
+
+group 'lv.id.jc'
+version '1.0-SNAPSHOT'
+

@@ -1,0 +1,83 @@
+plugins {
+    id 'groovy'
+    id 'java-library'
+    id 'maven-publish'
+    id 'jacoco'
+    id 'org.sonarqube' version '3.3'
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "rabestro_algorithms"
+    property "sonar.organization", "rabestro"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
+group 'lv.id.jc'
+version '1.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+// Configures the publishing
+publishing {
+    repositories {
+        // The target repository
+        maven {
+            // Choose whatever name you want
+            name = "Algorithms"
+            // The url of the repository, where the artifacts will be published
+            url = "https://maven.pkg.github.com/rabestro/algorithms"
+            credentials {
+                // The credentials (described in the next section)
+                username = project.findProperty("gpr.user")
+                password = project.findProperty("gpr.key")
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+            from(components.java)
+            // Fixes the error with dynamic versions when using Spring Boot
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    // Spock Framework
+    testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+    testImplementation 'org.codehaus.groovy:groovy-all:3.0.9'
+
+    // Spock Reports
+    testRuntimeClasspath( "com.athaydes:spock-reports:2.1.1-groovy-3.0" ) {
+        transitive = false // this avoids affecting your version of Groovy/Spock
+    }
+    // Required for spock-reports
+    testImplementation 'org.slf4j:slf4j-api:1.7.32'
+    testRuntimeClasspath 'org.slf4j:slf4j-simple:1.7.32'
+}
+
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+    dependsOn test
+
+    reports {
+        xml.required = true
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
+    }
+}

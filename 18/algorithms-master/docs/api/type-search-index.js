@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"lv.id.jc.algorithm.graph","l":"BreadthFirstSearch"},{"p":"lv.id.jc.algorithm.graph","l":"DijkstrasAlgorithm"},{"p":"lv.id.jc.algorithm.graph","l":"Graph"},{"p":"lv.id.jc.algorithm.graph","l":"SearchAlgorithm"}];updateSearchResults();

@@ -1,0 +1,14 @@
+// The simple test is demonstrate the difference between two algorithms
+// By default the application loads the complex graph
+
+// We make a search by using Breadth First Search algorithm
+shortest D B
+
+// The path is shortest and we check the distance/time
+distance D,C,B
+
+// For second search we use Dijkstras algorithm
+fastest D B
+
+// For the same source and target the path is longer but it requires less time
+distance D,E,F,G,C,B

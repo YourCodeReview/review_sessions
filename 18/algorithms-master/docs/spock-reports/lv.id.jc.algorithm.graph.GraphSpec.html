@@ -1,0 +1,731 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'></meta>
+<style>body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 200;
+}
+
+.back-link {
+  font-size: small;
+}
+
+table {
+  margin: 5px;
+}
+
+div.date-test-ran {
+  font-size: small;
+  font-style: italic;
+}
+
+table.features-table {
+  width: 800px;
+}
+
+table.summary-table {
+  width: 800px;
+  text-align: left;
+  font-weight: bold;
+  font-size: small;
+}
+
+table.summary-table th {
+  background: lightblue;
+  padding: 6px;
+}
+
+table.summary-table td {
+  background: #E0E0E0;
+  padding: 6px;
+}
+
+pre.title {
+  font-family: inherit;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1px;
+  color: #333;
+}
+
+pre.narrative {
+  font-family: inherit;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 23px;
+  letter-spacing: -1px;
+  color: #333;
+}
+
+.feature-description {
+  font-size: large;
+  background: lightblue;
+  padding: 12px;
+}
+
+.feature-toc-error {
+  color: #F89A4F;
+}
+
+.feature-toc-failure {
+  color: #FF8080;
+}
+
+.feature-toc-ignored {
+  color: lightgray;
+}
+
+.feature-toc-pass {
+  color: green;
+}
+
+.feature-description.error {
+  background: #F89A4F;
+}
+
+.feature-description.failure {
+  background: #FF8080;
+}
+
+.feature-description.ignored {
+  background: lightgray;
+}
+
+.feature-description.ignored .reason {
+  color: black;
+  font-style: italic;
+  font-size: small;
+}
+
+div.extra-info {
+  font-size: small;
+}
+
+div.spec-headers {
+  margin: 4px;
+  font-style: italic;
+}
+
+div.spec-header {
+}
+
+div.issues {
+  margin-top: 6px;
+  padding: 10px 5px 5px 5px;
+  background-color: lemonchiffon;
+  color: black;
+  font-weight: 500;
+  font-size: small;
+  max-width: 50%;
+}
+
+div.pending-feature {
+  background-color: dodgerblue;
+  color: white;
+  margin-top: 6px;
+  padding: 5px;
+  text-align: center;
+  font-size: small;
+  max-width: 120px;
+}
+
+div.problem-description {
+  padding: 10px;
+  background: pink;
+  border-radius: 10px;
+}
+
+div.problem-header {
+  font-weight: bold;
+  color: red;
+}
+
+div.problem-list {
+
+}
+
+table.ex-table th {
+  background: lightblue;
+  padding: 5px;
+}
+
+table.ex-table td {
+  background: #E0E0E0;
+  padding: 2px 5px 2px 5px;
+}
+
+table td {
+  min-width: 50px;
+}
+
+col.block-kind-col {
+  width: 70px;
+}
+
+span.spec-header {
+  font-weight: bold;
+}
+
+div.spec-text {
+  /*color: green;*/
+}
+
+div.spec-status {
+  font-style: italic;
+}
+
+.ignored {
+  color: gray;
+}
+
+td.ex-result {
+  text-align: center;
+  background: white !important;
+}
+
+.ex-pass {
+  color: darkgreen;
+}
+
+.ex-fail {
+  color: red;
+  font-weight: bold;
+}
+
+div.block-kind {
+  margin: 2px;
+  font-style: italic;
+}
+
+div.block-text {
+
+}
+
+pre.block-source {
+  background-color: whitesmoke;
+  padding: 10px;
+}
+
+pre.block-source.error {
+  background-color: pink;
+  color: red;
+  font-weight: bold;
+}
+
+pre.block-source.pre-error {
+
+}
+
+pre.block-source.before-error {
+  margin-bottom: -14px;
+}
+
+pre.block-source.after-error {
+  color: gray;
+  margin-top: -14px;
+}
+
+pre.block-source.post-error {
+  color: gray;
+}
+
+div.footer {
+  text-align: center;
+  font-size: small;
+}
+</style>
+</head>
+<body>
+<h2>Report for lv.id.jc.algorithm.graph.GraphSpec</h2>
+<hr></hr>
+<div class='back-link'>
+<a href='index.html'>&lt;&lt; Back</a>
+</div>
+<div class='summary-report'>
+<h3>Summary:</h3>
+<div class='date-test-ran'>Created on Tue Jan 11 09:12:51 EET 2022 by jegors.cemisovs</div>
+<table class='summary-table'>
+<thead>
+<tr>
+<th>Executed features</th>
+<th>Passed</th>
+<th>Failures</th>
+<th>Errors</th>
+<th>Skipped</th>
+<th>Success rate</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100.0%</td>
+<td>0.047 seconds</td>
+</tr>
+</tbody>
+</table>
+</div>
+<pre class='title'>Generic Graph</pre>
+<pre class='narrative'>A generic implementation of Graph structure</pre>
+<h3>Features:</h3>
+<table class='features-table'>
+<colgroup>
+<col class='block-kind-col'></col>
+<col class='block-text-col'></col>
+</colgroup>
+<tbody>
+<ul id='toc'>
+<li>
+<a href='#1895788456' class='feature-toc-pass'>should return edges for a given node</a>
+</li>
+<li>
+<a href='#449388383' class='feature-toc-pass'>should calculate distance for a path</a>
+</li>
+<li>
+<a href='#-1304864623' class='feature-toc-pass'>should be zero distance for an empty path</a>
+</li>
+<li>
+<a href='#-1756519493' class='feature-toc-pass'>should be zero distance for any one node path</a>
+</li>
+<li>
+<a href='#-930833861' class='feature-toc-pass'>should throw NPE for incorrect path</a>
+</li>
+</ul>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='1895788456'>
+<span>should return edges for a given node</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>a simple graph with three nodes</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>def graph = Graph.of([
+        A: [B: 7, C: 2],
+        B: [A: 3, C: 5],
+        C: [A: 1, B: 3]
+])</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>The method returns expected edges for given node</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>graph.edges(node) == expected</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>node</th>
+<th class='ex-header'>expected</th>
+</tr>
+</thead>
+<tbody>
+<tr class='ex-pass'>
+<td class='ex-value'>A</td>
+<td class='ex-value'>[B:7, C:2]</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>B</td>
+<td class='ex-value'>[A:3, C:5]</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>C</td>
+<td class='ex-value'>[A:1, B:3]</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td>
+<div class='spec-status'>3/3 passed</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='449388383'>
+<span>should calculate distance for a path</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>a complex graph with eight nodes</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>def graph = Graph.of([
+        A: [B: 5, H: 2],
+        B: [A: 5, C: 7],
+        C: [B: 7, D: 3, G: 4],
+        D: [C: 20, E: 4],
+        E: [F: 5],
+        F: [G: 6],
+        G: [C: 4],
+        H: [G: 3]
+])</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the distance for a path correctly calculated</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>graph.getDistance(path) == distance as double</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>path and expected distance</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>path</th>
+<th class='ex-header'>distance</th>
+</tr>
+</thead>
+<tbody>
+<tr class='ex-pass'>
+<td class='ex-value'>[A]</td>
+<td class='ex-value'>0</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>[A, B]</td>
+<td class='ex-value'>5</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>[B, A]</td>
+<td class='ex-value'>5</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>[A, B, A]</td>
+<td class='ex-value'>10</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>[A, B, A, B]</td>
+<td class='ex-value'>15</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>[C, D]</td>
+<td class='ex-value'>3</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>[D, C]</td>
+<td class='ex-value'>20</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>[D, E, F, G, C]</td>
+<td class='ex-value'>19</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td>
+<div class='spec-status'>8/8 passed</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-1304864623'>
+<span>should be zero distance for an empty path</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>any graph</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>def graph = Graph.of(_ as Map)</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the distance is zero for an empty path</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>graph.getDistance([]) == 0</pre>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-1756519493'>
+<span>should be zero distance for any one node path</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>any graph</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>def graph = Graph.of(_ as Map)</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<div class='block-text'>the zero distance for any one-node path</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>graph.getDistance(oneNodePath) == 0</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>the node may be of any type and even non-existent</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>oneNodePath</th>
+</tr>
+</thead>
+<tbody>
+<tr class='ex-pass'>
+<td class='ex-value'>[A]</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>[B]</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>[2]</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>[X]</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>[12.56]</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td>
+<div class='spec-status'>5/5 passed</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-930833861'>
+<span>should throw NPE for incorrect path</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>a medium graph with five nodes</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>def graph = Graph.of([
+        A: [B: 5],
+        B: [A: 5, C: 10],
+        C: [B: 20, D: 5],
+        D: [E: 5],
+        E: [B: 5]
+])</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>When:</div>
+</td>
+<td>
+<div class='block-text'>we call the method with incorrect path</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>graph.getDistance(incorrectPath)</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Then:</div>
+</td>
+<td>
+<div class='block-text'>the NPE thrown</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>thrown NullPointerException</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>path is more then one node</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<tr>
+<th class='ex-header'>incorrectPath</th>
+</tr>
+</thead>
+<tbody>
+<tr class='ex-pass'>
+<td class='ex-value'>[E, D]</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>[A, C]</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>[A, B, D]</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td>
+<div class='spec-status'>3/3 passed</div>
+</td>
+</tr>
+</tbody>
+</table>
+<hr></hr>
+<div class='footer'>Generated by <a href='https://github.com/renatoathaydes/spock-reports'>Athaydes Spock Reports</a></div>
+</body>
+</html>

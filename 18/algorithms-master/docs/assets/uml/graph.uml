@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>lv.id.jc.algorithm.graph</OriginalElement>
+  <nodes>
+    <node x="-79.0" y="-132.0">lv.id.jc.algorithm.graph.SearchAlgorithm</node>
+    <node x="-225.0" y="-19.0">lv.id.jc.algorithm.graph.DijkstrasAlgorithm</node>
+    <node x="67.0" y="-19.0">lv.id.jc.algorithm.graph.BreadthFirstSearch</node>
+    <node x="-100.0" y="94.0">lv.id.jc.algorithm.graph.Graph</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="lv.id.jc.algorithm.graph.BreadthFirstSearch" target="lv.id.jc.algorithm.graph.SearchAlgorithm" relationship="REALIZATION">
+      <point x="0.0" y="-31.5" />
+      <point x="203.0" y="-44.0" />
+      <point x="57.0" y="-44.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="lv.id.jc.algorithm.graph.DijkstrasAlgorithm" target="lv.id.jc.algorithm.graph.SearchAlgorithm" relationship="REALIZATION">
+      <point x="0.0" y="-31.5" />
+      <point x="-89.0" y="-44.0" />
+      <point x="57.0" y="-44.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="282.0" y="181.0" />
+  <SelectedNodes>
+    <node>lv.id.jc.algorithm.graph.Graph</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

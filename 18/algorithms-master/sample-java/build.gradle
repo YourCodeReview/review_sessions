@@ -1,0 +1,24 @@
+plugins {
+    id 'application'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':algorithm')
+}
+
+application {
+    mainModule = 'lv.id.jc.sample'
+    mainClass = 'lv.id.jc.sample.GraphApp'
+}
+
+run {
+    standardInput = System.in
+}
