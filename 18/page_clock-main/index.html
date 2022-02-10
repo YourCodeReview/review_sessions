@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'clock</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="section-clock-title">
+            <img class="clock_element" src="./img/clock_element.png" alt="element">
+            <div class="section-clock-body">
+                <div class="min_circle">
+                    <img class="circle_min" src="./img/min_circle.png" alt="circle">
+                    <img class="circle_element" src="./img/circle_element.png" alt="element">
+                </div>
+            </div>
+            </div> 
+            <div class="arrows_clock">
+                <div class="center">
+                    <img src="./img/Centr.png" alt="center">
+                </div>
+                <div class="min_arrows_clock">
+                    <img id="min" src="./img/min.png" alt="min">
+                </div>
+                <div class="second_arrows_clock">
+                    <img id="sec" src="./img/sec.png" alt="sec">
+                </div>
+        </div>
+        <div class="clock-window">
+            <div class="clock_window_ikon">
+                <input id="one" class="ikon_clock_span" type="text" maxlength="1" value="1">
+            </div>
+            <div class="clock_window_ikon">
+                <input id="second" class="ikon_clock_span" type="text" maxlength="1" value="2">
+            </div>
+            <div class="clock_window_ikon">
+                <input id="thri" class="ikon_clock_span" type="text" maxlength="1" value="1">
+            </div>
+            <div class="clock_window_ikon">
+                <input id="four" class="ikon_clock_span" type="text" maxlength="1" value="0">
+            </div>
+        </div>
+    </div>
+    <button class="rotate" type="submit">Rotate</button>
+
+    <script src="./js/root.js"></script>
+    <script src="./JS/current.js"></script>
+    <script src="./JS/digital.js"></script>
+    <script src="./JS/setting.js"></script>
+</body>
+</html>
