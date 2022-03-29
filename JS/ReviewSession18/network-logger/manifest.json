@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Network logger",
+  "version": "1.2.0",
+  "description": "",
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "assets/icons/icon16.png",
+    "default_popup": "popup/index.html",
+    "default_title": "Network logger"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "content/index.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background/index.js"
+    ],
+    "persistent": true
+  },
+  "devtools_page": "devtools/index.html",
+  "web_accessible_resources": [
+    "assets/icons/*.png"
+  ],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "webRequest"
+  ]
+}
