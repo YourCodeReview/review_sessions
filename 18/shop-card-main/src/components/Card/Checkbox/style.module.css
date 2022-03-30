@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 84px;
+  margin-bottom: 13px;
+}
+.desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+input[type="checkbox"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.custCheckbox {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background-color: #dedede;
+  border-radius: 5px;
+  margin-left: 4px;
+}
+.custCheckboxActive {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: linear-gradient(261.65deg, #efbb37 -3.95%, #cf9e1f 109.44%);
+  border-radius: 5px;
+}

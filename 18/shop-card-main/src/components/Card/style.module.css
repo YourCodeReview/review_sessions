@@ -1,0 +1,185 @@
+:root {
+  --bg-color-card: #f8fafc;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 100%;
+  max-width: 573px;
+  height: 707px;
+  padding: 53px 29px 30px 31px;
+  background-color: var(--bg-color-card);
+  border-radius: 25px;
+  transition: 0.5s;
+}
+.card:hover {
+  box-shadow: 0 0px 20px #e5e5e5;
+  transition: 0.5s;
+}
+/* box image */
+.card__boxImage {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.card__boxImage::before {
+  content: "new";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 71px;
+  height: 26px;
+  background: linear-gradient(261.65deg, #efbb37 -3.95%, #cf9e1f 109.44%);
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  color: #fff;
+  line-height: 26px;
+}
+.card__boxImage:hover::before {
+  box-shadow: 0px 0px 15px 0px #0000001a;
+}
+.card__boxImage::after {
+  content: url("../../assets/image/icon-product.svg");
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+}
+.card__boxImage:hover::after {
+  box-shadow: 0px 0px 15px 0px #0000001a;
+}
+.card__iamge {
+  width: 100%;
+  max-width: 256px;
+  height: 261px;
+  object-fit: cover;
+}
+/* box text */
+.card__textBox {
+  width: 100%;
+  max-width: 483px;
+  margin: 25px 0 20px 0;
+}
+.card__productName {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  color: #2c2c2c;
+}
+.card__productDescription {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #2c2c2c;
+}
+/* box navigator */
+.card__boxNavigator {
+}
+/* custom select */
+.card__boxSelect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__colorSelect {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  max-width: 258px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 0 12px 0 20px;
+  font-family: SF UI Display;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color: #2c2c2c;
+}
+.card__price {
+}
+.card__priceNumber {
+}
+
+/* custom checkbox */
+.card__checkbox {
+}
+/* count prouduct and buy  */
+.card__boxPay {
+  display: flex;
+  align-items: center;
+  margin-top: 27px;
+}
+.card__countProduct {
+  display: block;
+  width: 96px;
+  height: 39px;
+  text-align: center;
+  line-height: 39px;
+  background-color: #e2e9f0;
+  border-radius: 30px;
+  position: relative;
+}
+.card__countProduct:not(:last-child) {
+  margin-right: 31px;
+}
+.card__countProduct::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 0.5px);
+  left: 10px;
+  display: block;
+  width: 8px;
+  height: 1px;
+  background-color: #2c2c2c;
+}
+.card__countProduct::after {
+  content: "+";
+  position: absolute;
+  right: 10px;
+}
+.card__btnProduct {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  max-width: 302px;
+  min-height: 39px;
+  background: linear-gradient(261.65deg, #efbb37 -3.95%, #cf9e1f 109.44%);
+  border-radius: 30px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 39px;
+  transition: 0.3s;
+}
+.card__btnProduct:hover {
+  box-shadow: 0px 0px 10px #efbb37;
+  transition: 0.3s;
+}
