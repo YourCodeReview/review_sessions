@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "crypto_address_validator"
+version = "0.5.0"
+description = "Simple validation tool for Bitcoin and other altcoin addresses."
+authors = ["null-po1nter <me.nullptr@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+base58 = "^2.1.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+flake8 = "^4.0.1"
+flake8-bugbear = "^21.11.29"
+pep8-naming = "^0.12.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
