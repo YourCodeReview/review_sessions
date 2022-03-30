@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background: #bf3a37;
+  width: 100%;
+  height: 1000px;
+}
+.section-clock-title {
+  width: 414px;
+  height: 414px;
+  background: url("../img/Background.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.clock_element {
+  position: absolute;
+  top: 9%;
+  left: 9%;
+}
+.section-clock-body {
+  width: 353px;
+  height: 353px;
+  background: url("../img/white_fon.png");
+  z-index: 1;
+}
+.min_circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle_min {
+  position: relative;
+  z-index: 2;
+}
+.circle_element {
+  position: absolute;
+  top: 18%;
+  left: 18%;
+}
+/* ******************* */
+.arrows_clock {
+  position: absolute;
+  z-index: 1;
+  top: 325px;
+}
+#min {
+  transform-origin: bottom;
+}
+#sec {
+  /* position: relative; */
+  /* display: block; */
+  transform-origin: bottom;
+}
+.center {
+  position: relative;
+  z-index: 3;
+}
+.min_arrows_clock {
+  position: absolute;
+  top: -66px;
+  left: 14px;
+}
+.second_arrows_clock {
+  position: absolute;
+  top: -100px;
+  left: 17px;
+  z-index: 2;
+}
+/* ************************ */
+.clock-window {
+  display: flex;
+  justify-content: center;
+}
+.clock_window_ikon {
+  max-width: 143px;
+  max-height: 192px;
+  border: 11px solid #e97d81;
+  border-radius: 20px;
+  text-align: center;
+  background: #e97d81;
+  margin: 50px 6px;
+}
+.ikon_clock_span {
+  max-width: 108px;
+  font-size: 144px;
+  font-weight: 400;
+  line-height: 169px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(101, 93, 102, 1);
+  background: rgba(218, 234, 239, 1);
+  display: block;
+  border-radius: 20px;
+  margin: 0 6px;
+}
+.clock_window_ikon:nth-of-type(2n + 3) {
+  margin-left: 45px;
+}
