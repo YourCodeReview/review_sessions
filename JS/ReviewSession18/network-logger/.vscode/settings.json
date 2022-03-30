@@ -1,0 +1,32 @@
+{
+    "editor.insertSpaces": true,
+    "editor.rulers": [
+      120
+    ],
+    "editor.tabSize": 2,
+    "eslint.quiet": true,
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    ],
+    "files.encoding": "utf8",
+    "files.exclude": {
+      "**/node_modules": true,
+      ".cache": true,
+      "dist": true,
+      "src/**/*.js": true,
+      "src/**/*.d.ts": true,
+      "src/**/*.js.map": true
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "search.exclude": {
+      "**/*.d.ts": true,
+      "**/*.js.map": true,
+      "**/node_modules": true,
+      "dist": true,
+    },
+    "typescript.preferences.importModuleSpecifier": "shortest",
+  }
